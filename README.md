@@ -1,5 +1,10 @@
 # DCUR
 
+This is the code used for the paper **DCUR: Data Curriculum for Teaching via Samples with Reinforcement Learning**, by Daniel Seita, Abhinav Gopal, Zhao Mandi, and John Canny. The project website: https://sites.google.com/view/teach-curr/home
+
+
+# Installation
+
 This code has been tested on Ubuntu 18.04. To install, first follow the
 [SpinningUp installation instructions][1], including the MuJoCo installation.
 For example you can do this:
