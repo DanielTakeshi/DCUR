@@ -1,8 +1,8 @@
-# MuJoCo Experiments
+# DCUR
 
-This has been tested on Ubuntu 18.04. To install, first follow the [SpinningUp
-installation instructions][1], including the MuJoCo installation. For example you
-can do this:
+This code has been tested on Ubuntu 18.04. To install, first follow the
+[SpinningUp installation instructions][1], including the MuJoCo installation.
+For example you can do this:
 
 ```
 wget "https://www.roboti.us/download/mujoco200_linux.zip"
@@ -123,38 +123,6 @@ See `bash/plot_teachers.sh` for plotting vanilla RL. They are saved in
 policy. We include this functionality by default when training teachers, so
 that each will have data stored in a `buffer/` directory in the form of a
 pickle file.
-
-## Data Collection From Snapshots
-
-This applies for any Offline RL data collection procedure that relies on
-rolling out an already-trained snapshot (e.g., *not* the "final buffer" case).
-We can run the script:
-
-```
-python spinup/teaching/load_policy.py data/ant/ant_s0/  [args]
-```
-
-with additional arguments afterwards. See bash scripts for details. Look for
-data in `data/*/*s10/data/`.
-
-
-## Abhinav's Modifications
-
-Teaching Project Modifications
-
-- For the variance predictor, buffer data needs to be generated beforehand and
-  then the variance predictor is called with `train_data` and `test_data`
-  arguments that point to the respective buffers
-
-- For the batchRL script, we simply need a pre-trained teacher, which is passed
-  in with `teacher_path`. Specify the `buffer_size` to create, the amount of
-  `teacher_noise` (This specifies the variance)
-
-- The batchRL Script is called in the following style (Example):
-
-```
-python train_batchRL_td3.py --teacher_path ../data/td3HopperDefault/td3HopperDefault_s0 --exp_name td3_batchRL_hopper --env Hopper-v3 --buffer_size 1000000
-```
 
 
 ## General Tips
