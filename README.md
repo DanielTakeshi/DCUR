@@ -3,7 +3,7 @@
 This is the code used for the paper **DCUR: Data Curriculum for Teaching via Samples with Reinforcement Learning**, by Daniel Seita, Abhinav Gopal, Zhao Mandi, and John Canny. The project website: https://sites.google.com/view/teach-curr/home
 
 
-# Installation
+# README
 
 This code has been tested on Ubuntu 18.04. To install, first follow the
 [SpinningUp installation instructions][1], including the MuJoCo installation.
@@ -96,12 +96,9 @@ report][9] also helps -- Erwin Coumans explains the state representation.
 See `bash/plot_teachers.sh` for plotting vanilla RL. They are saved in
 `data/<exp_name>/<exp_name>_s<seed>/figures`.
 
-**Note on data collection for the "final buffer" case**: in (Fujimoto et al.,
-2019), the final buffer case will take logged gameplay data from a trained
-policy. We include this functionality by default when training teachers, so
-that each will have data stored in a `buffer/` directory in the form of a
-pickle file.
+## Results in the Paper
 
+See `bash/paper` for the bash scripts that we used to run experiments for the paper.
 
 ## General Tips
 
