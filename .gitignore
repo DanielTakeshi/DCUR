@@ -1,0 +1,24 @@
+*.*~
+__pycache__/
+*.pkl
+data/
+**/*.egg-info
+.python-version
+.idea/
+.vscode/
+.DS_Store
+_build/
+
+
+
+# Daniel added
+*.swp
+*.swo
+*.png
+*.pt
+*.tar
+*.tar.gz
+*.gif
+*.mof
+*.mp4
+MUJOCO_LOG.TXT
