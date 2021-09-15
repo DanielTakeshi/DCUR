@@ -36,8 +36,9 @@ pip install -U 'mujoco-py<2.1,>=2.0'
 pip install imageio-ffmpeg
 ```
 
+If the pip install for `mujoco-py` is causing issues, try:
+
 ```
-# Mandi: fixed error from pip install -U 'mujoco-py<2.1,>=2.0' with:
 sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
 ```
 
@@ -45,34 +46,6 @@ The first command installs a dependency that isn't listed on the instructions.
 The last command is used in case we want videos from MuJoCo.
 The command `pip install gym[mujoco,robotics]` doesn't work for me since it
 assumes MuJoCo 1.5, but I'm able to run the MuJoCo environments anyway.
-
-
-To test, ensure that training PPO works:
-=======
-Other useful stuff to install:
-
-```
-conda install scikit-learn
-```
-
-**After installation**, to test, ensure that training PPO works:
-
-
-```
-python -m spinup.run ppo --hid "[32,32]" --env Walker2d-v2 --exp_name mujocotest
-```
-
-By default, information will be stored in `data/`, including snapshots every
-`save_freq`. You can change the data directory in `spinup/user_config.py`.
-
-See [this][7] and [this][8] for some discussion about some MuJoCo versions.
-However, it's fine to use the latest version of everything so long as we keep
-comparisons consistent. It just means for *some* of the environments (only
-those using contact forces), some of the state vector is always be 0.
-
-- [Training RL Algorithms](#training-rl-algorithms)
-- [Data Collection From Snapshots](#data-collection-from-snapshots)
-
 
 **Finally**, since we save a lot of directories, please add this to your
 `.bashrc` to point to a machine-dependent path, ideally in disk space.
