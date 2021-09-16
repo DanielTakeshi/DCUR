@@ -5,7 +5,7 @@ This is the code used for the paper:
 - **DCUR: Data Curriculum for Teaching via Samples with Reinforcement Learning**
 - [Daniel Seita](https://www.cs.cmu.edu/~dseita/), Abhinav Gopal, Zhao Mandi, and [John Canny](https://people.eecs.berkeley.edu/~jfc/).
 - Project website: https://sites.google.com/view/teach-curr/home
-- arXiv: coming soon
+- arXiv: https://arxiv.org/abs/2109.07380
 
 
 # README
