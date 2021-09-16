@@ -121,6 +121,21 @@ where `x` and `y` represent zero-indexed CPU indices to reveal to the code.
 If we benchmark with BCQ, which we probably should, then [use code from the
 author][5].
 
+## Citation
+
+If you use this code in your work, please consider citing the paper:
+
+```
+@misc{seita2021dcur,
+      title={{DCUR: Data Curriculum for Teaching via Samples with Reinforcement Learning}},
+      author={Daniel Seita and Abhinav Gopal and Zhao Mandi and John Canny},
+      year={2021},
+      eprint={2109.07380},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
 
 [1]:https://spinningup.openai.com/en/latest/user/installation.html
 [2]:https://github.com/openai/mujoco-py
